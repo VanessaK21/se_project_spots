@@ -5,6 +5,13 @@
   overflow: hidden;
 }
 
+.card__title {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
 .card__image {
   width: 100%;
   aspect-ratio: 16/9;
@@ -25,4 +32,10 @@
   border: none;
   background-color: transparent;
   opacity: 40%;
+}
+
+@media screen and (max-width: 627px) {
+  .card__image {
+    height: 288px;
+  }
 }
