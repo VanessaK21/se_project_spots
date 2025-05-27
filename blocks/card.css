@@ -7,7 +7,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  max-width: 350px];
+  max-width: 350px;
   margin: 0;
   color: #212121;
   text-overflow: ellipsis;
@@ -21,8 +21,8 @@
   object-fit: cover;
   display: block;
   margin-bottom: 12px;
-  height: 445px;
-  border-radius: 19px;
+  height: 413px;
+  border-radius: 8px;
 }
 
 .card__content {
@@ -51,11 +51,6 @@
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .card__title {
     max-width: 280px;
     font-size: 16px;
     line-height: 1;
