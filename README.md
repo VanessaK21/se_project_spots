@@ -16,4 +16,4 @@ https://vanessak21.github.io/se_project_spots/
 
 ## Video Recording
 
-https://drive.google.com/file/d/1OEGbCAkt3NcOG0iN7zpXlC0IwWRNoH05/view?usp=sharing
+https://drive.google.com/file/d/1OEGbCAkt3NcOG0iN7zpXlC0IwWRNoH05/view?usp=sharinggi
