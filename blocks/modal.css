@@ -89,8 +89,7 @@
   /*TODO: remove max-width in media query*/
 }
 
-@media screen and (max-width: 480
-px) {
+@media screen and (max-width: 480px) {
   .modal {
     font-size: 20px;
     max-width: none;
