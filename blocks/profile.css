@@ -63,6 +63,8 @@
   border: none;
   cursor: pointer;
   margin-right: auto;
+  transition-timing-function: linear;
+  transition-duration: 2s;
 }
 
 .profile__edit-btn:hover {
@@ -88,7 +90,7 @@
   opacity: 0.8;
 }
 
-.profile__add-btn_img {
+.profile__add-btn-img {
   margin-right: 8px;
 }
 
