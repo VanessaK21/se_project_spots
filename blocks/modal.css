@@ -10,10 +10,14 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
 }
 
 .modal_is-opened {
   visibility: visible;
+  opacity: 1;
+  transition: visibility 0.3s, opacity 0.3s;
 }
 
 .modal__container {
@@ -31,9 +35,14 @@
   right: 50px;
   width: 40px;
   height: 40px;
-  background-image: url(/images/close-btn-icon.svg);
+  background-image: url(/images/close-btn.svg);
   border: none;
   background-color: #fff;
+  cursor: pointer;
+}
+
+.modal__close-btn:hover {
+  opacity: 0.5;
 }
 
 .modal__submit-btn {
@@ -86,7 +95,6 @@
 
 .modal__submit-btn {
   max-width: 156px;
-  /*TODO: remove max-width in media query*/
 }
 
 @media screen and (max-width: 480px) {
