@@ -26,6 +26,10 @@ editProfileBtn.addEventListener("click", function () {
   openModal(editProfileModal);
 });
 
+function openModal(editProfileBtn) {
+  editProfileBtn.classList.add("modal_is-opened");
+}
+
 editProfileCloseBtn.addEventListener("click", function () {
   editProfileModal.classList.remove("modal_is-opened");
 });
@@ -33,6 +37,10 @@ editProfileCloseBtn.addEventListener("click", function () {
 newPostBtn.addEventListener("click", function () {
   newPostModal.classList.add("modal_is-opened");
 });
+
+function closeModal(editProfileBtn) {
+  editProfileBtn.classList.remove("modal_is-opened");
+}
 
 newPostCloseBtn.addEventListener("click", function () {
   newPostModal.classList.remove("modal_is-opened");
