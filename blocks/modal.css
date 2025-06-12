@@ -35,7 +35,7 @@
   right: 50px;
   width: 40px;
   height: 40px;
-  background-image: url(/images/close-btn.svg);
+  background-image: url(../images/close-btn.svg);
   border: none;
   background-color: #fff;
   cursor: pointer;
@@ -79,9 +79,10 @@
 
 .modal__input {
   display: block;
+  border: 1px solid #21212166;
   margin: 8px 0 0;
   width: 100%;
-  border-radius: 1px;
+  border-radius: 8px;
   padding: 16px 12px 16px 12px;
   font-family: poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
