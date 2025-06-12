@@ -43,20 +43,16 @@ newPostBtn.addEventListener("click", function () {
   openModal(newPostModal);
 });
 
-function closeModal(editProfileBtn) {
-  editProfileBtn.classList.remove("modal_is-opened");
-}
-
 newPostCloseBtn.addEventListener("click", function () {
   closeModal(newPostModal);
 });
 
 function handleEditProfileSubmit(evt) {
-  editProfileForm.reset();
   evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
   closeModal(editProfileModal);
+  editProfileForm.reset();
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
