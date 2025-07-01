@@ -155,14 +155,6 @@
     max-width: none;
   }
 }
-@media screen and (max-width: 320px) {
-  .modal {
-    font-size: 20px;
-    max-width: 288px;
-    max-height: 274px;
-    padding-bottom: 20px;
-  }
-}
 @media screen and (max-width: 480px) {
   .modal__caption {
     font-size: 16px;
@@ -172,5 +164,15 @@
   .modal__image {
     max-width: none;
     max-height: none;
+  }
+}
+@media screen and (max-width: 320px) {
+  .modal__container {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  .modal__title {
+    font-size: 16px;
   }
 }
