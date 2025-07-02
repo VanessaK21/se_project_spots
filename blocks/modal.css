@@ -45,7 +45,7 @@
 .modal__close-btn_type_preview {
   top: 0;
   right: -52.5px;
-  background-image: url(../images/x-btn.svg);
+  background-image: url(../images/Property\ 1=Variant3.svg);
   background-color: transparent;
   color: #fff;
 }
@@ -80,8 +80,11 @@
   font-size: 20px;
   line-height: 1.2;
   background-color: #212121;
-  width: 214px;
-  height: 32px;
+  position: absolute;
+  left: 0;
+  padding: 4px 8px;
+  top: calc(100% + 10px);
+  margin: 0;
   border-radius: 8px;
 }
 
@@ -168,11 +171,17 @@
 }
 @media screen and (max-width: 320px) {
   .modal__container {
-    padding: 0;
+    padding: 22px 12px 12px;
   }
 }
 @media screen and (max-width: 320px) {
   .modal__title {
+    font-size: 20px;
+  }
+  .modal__input {
     font-size: 16px;
+  }
+  .modal__button {
+    max-width: none;
   }
 }
