@@ -105,6 +105,8 @@ function openModal(modal) {
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.addEventListener("keydown", handleEscape);
+  evt.target.classList.contains("modal");
 }
 
 editProfileCloseBtn.addEventListener("click", function () {
@@ -114,6 +116,7 @@ editProfileCloseBtn.addEventListener("click", function () {
 
 previewModal.addEventListener("click", function () {
   closeModal(previewModal);
+  evt.target;
 });
 
 newPostBtn.addEventListener("click", function () {
@@ -136,7 +139,7 @@ editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
-  disableButton(handleAddCardSubmit, config);
+  disableButton(handleAddCardSubmit, config, buttonElement);
   const newCardData = {
     name: captionInput.value,
     link: linkInput.value,

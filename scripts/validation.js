@@ -3,8 +3,8 @@ const settings = {
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-btn",
   inactiveButtonClass: "modal__button_disabled",
-  inputErrorClass: ".modal__input_type_error",
-  errorClass: "modal__error",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error_visible",
 };
 
 const showInputError = (formElement, inputElement, errorMessage) => {
@@ -40,14 +40,14 @@ const toggleButtonState = (inputList, buttonElement) => {
     disableButton(buttonElement);
   } else {
     buttonElement.disabled = false;
-    inputElement.classList.remove(modal__toggle - button);
+    buttonElement.classList.add(config.inactiveButtonClass);
     //Remove the disabled class
   }
 };
 
 const disableButton = (buttonElement, config) => {
   buttonElement.disabled = true;
-  inputElement.classList.add(modal__toggle - button);
+  buttonElement.classList.add(config.inactiveButtonClass);
   //Add a modifier class to the buttonElement to make it grey
   //Don't forget CSS
 };
