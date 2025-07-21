@@ -75,7 +75,7 @@
                 maxlength="40"
                 required
               />
-              <span class="modal__error"></span>
+              <span class="modal__error" id="profile-name-input-error"></span>
             </label>
             <label for="profile-description-input" class="modal__label"
               >Description
@@ -88,10 +88,10 @@
                 maxlength="200"
                 required
               />
-              <span class="modal__error"
-                >Please use at least 2 characters (you are currently using 1
-                character).</span
-              >
+              <span
+                class="modal__error"
+                id="profile-description-input-error"
+              ></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>

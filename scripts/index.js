@@ -49,6 +49,7 @@ const addCardFormElement = newPostModal.querySelector(".modal__form");
 const cardSub = newPostModal.querySelector(".modal__button");
 const captionInput = newPostModal.querySelector("#caption-description-input");
 const linkInput = newPostModal.querySelector("#card-image-input");
+const addCardSubmitButton = newPostModal.querySelector(".modal__submit-btn");
 
 const previewModal = document.querySelector("#preview-modal");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
@@ -101,12 +102,17 @@ editProfileBtn.addEventListener("click", function () {
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscape);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
-  document.addEventListener("keydown", handleEscape);
   evt.target.classList.contains("modal");
+  document.removeEventListener("keydown", handleEscape);
+}
+
+function handleEscape(event) {
+  if (event.key === "Escape") closeModal(editProfileCloseBtn);
 }
 
 editProfileCloseBtn.addEventListener("click", function () {
@@ -139,7 +145,7 @@ editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
-  disableButton(handleAddCardSubmit, config, buttonElement);
+  disableButton(addCardSubmitButton, settings);
   const newCardData = {
     name: captionInput.value,
     link: linkInput.value,
