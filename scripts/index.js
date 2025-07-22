@@ -107,17 +107,21 @@ function openModal(modal) {
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
-  evt.target.classList.contains("modal");
   document.removeEventListener("keydown", handleEscape);
 }
 
-function handleEscape(event) {
-  if (event.key === "Escape") closeModal(editProfileCloseBtn);
+function handleEscape(modal, event) {
+  if (event.key === "Escape") closeModal(modal);
 }
 
 editProfileCloseBtn.addEventListener("click", function () {
   closeModal(editProfileModal);
   editProfileForm.reset();
+
+  const inputList = Array.from(
+    editProfileForm.querySelectorAll(settings.inputSelector)
+  );
+  resetValidation(editProfileForm, inputList);
 });
 
 previewModal.addEventListener("click", function () {

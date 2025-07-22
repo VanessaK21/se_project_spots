@@ -98,6 +98,10 @@
   font-family: poppins, Arial, Helvetica, sans-serif;
 }
 
+.modal__button_disabled {
+  opacity: 0.5;
+}
+
 .modal__title {
   margin: 0 0 32px;
   font-family: poppins, Arial, Helvetica, sans-serif;
