@@ -110,10 +110,6 @@ function closeModal(modal) {
   document.removeEventListener("keydown", handleEscape);
 }
 
-function handleEscape(modal, event) {
-  if (event.key === "Escape") closeModal(modal);
-}
-
 editProfileCloseBtn.addEventListener("click", function () {
   closeModal(editProfileModal);
   editProfileForm.reset();
@@ -136,6 +132,11 @@ newPostBtn.addEventListener("click", function () {
 newPostCloseBtn.addEventListener("click", function () {
   closeModal(newPostModal);
 });
+
+function handleEscape(event) {
+  if (event.key === "Escape") modal.classList.remove(newPostModal);
+  document.removeEventListener("keydown", handleEscape);
+}
 
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
