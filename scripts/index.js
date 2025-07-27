@@ -134,8 +134,10 @@ newPostCloseBtn.addEventListener("click", function () {
 });
 
 function handleEscape(event) {
-  if (event.key === "Escape") modal.classList.remove(newPostModal);
-  document.removeEventListener("keydown", handleEscape);
+  if (event.key === "Escape") {
+    const activeModal = document.querySelector(".modal_is-opened");
+    closeModal(activeModal);
+  }
 }
 
 function handleEditProfileSubmit(evt) {
